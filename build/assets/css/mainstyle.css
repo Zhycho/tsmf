@@ -1,5 +1,8 @@
 
 
+.header {
+  position: relative;
+}
 .header-top {
   align-items: center;
   display: flex;
@@ -70,6 +73,8 @@
   height: 46px;
 }
 .header-nav {
+  display: flex;
+  justify-content: space-between;
   height: 46px;
   padding-left: 8px;
 }
@@ -89,6 +94,104 @@
 }
 .header-nav__item a:hover {
   color: #01449f;
+}
+.header-nav__buttons {
+  display: flex;
+}
+.header-nav__buttons-item {
+  align-items: center;
+  background-color: #01449f;
+  display: flex;
+  height: 46px;
+  fill: #FFF;
+  justify-content: center;
+  transition: 0.2s all;
+  width: 48px;
+}
+.header-nav__buttons-item.header-nav__buttons-item_basket {
+  position: relative;
+}
+.header-nav__buttons-item.header-nav__buttons-item_basket::after {
+  align-items: center;
+  background-color: #ef2323;
+  border-radius: 50%;
+  content: "2";
+  color: #FFF;
+  display: flex;
+  font-size: 11px;
+  height: 16px;
+  justify-content: center;
+  min-width: 16px;
+  position: absolute;
+  right: 3px;
+  top: 3px;
+  width: 16px;
+}
+.header-nav__buttons-item:hover {
+  background-color: #ffd21f;
+  fill: #191919;
+}
+.header-aside {
+  background-color: #01449f;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 132px;
+}
+.header-logo {
+  align-items: center;
+  display: flex;
+  height: 113px;
+  fill: #FFF;
+  justify-content: center;
+  transition: 0.25s all;
+  width: 132px;
+}
+.header-logo:hover {
+  fill: #ffd21f;
+}
+.header-catalog {
+  align-items: center;
+  background-color: #013e91;
+  color: #FFF;
+  display: flex;
+  fill: #FFF;
+  font-weight: 600;
+  height: 46px;
+  justify-content: center;
+  transition: 0.25s all;
+  width: 100%;
+}
+.header-catalog svg {
+  margin-right: 10px;
+}
+.header-catalog:hover {
+  color: #ffd21f;
+  fill: #ffd21f;
+}
+.aside-catalog {
+  min-height: 100vh;
+}
+.aside-catalog-list__item a {
+  align-items: center;
+  border-bottom: 1px solid #3469b2;
+  color: #FFF;
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  height: 93px;
+  fill: #FFF;
+  justify-content: center;
+  padding: 0 12px;
+  text-align: center;
+  transition: 0.25s all;
+}
+.aside-catalog-list__item a svg {
+  margin-bottom: 8px;
+}
+.aside-catalog-list__item a:hover {
+  color: #ffd21f;
+  fill: #ffd21f;
 }
 
 @font-face {
