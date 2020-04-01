@@ -162,6 +162,97 @@
   color: #ffd21f;
 }
 
+.choose-zone-wrapper {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.choose-zone-list {
+  left: 40px;
+  position: absolute;
+  top: 12px;
+}
+.choose-zone-list__item a {
+  display: inline-block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 6px 0;
+  transition: 0.2s all;
+}
+.choose-zone-list__item a:hover {
+  color: #01449f;
+}
+.chooze-zone {
+  display: block;
+  margin: 0 auto;
+  position: relative;
+}
+.chooze-zone img {
+  display: block;
+}
+.choose-zone-list-on-image {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.choose-zone-list-on-image__item {
+  position: absolute;
+  z-index: 1;
+}
+.choose-zone-list-on-image__item a {
+  align-items: center;
+  background-color: #01449f;
+  color: #FFF;
+  display: flex;
+  font-size: 0.75rem;
+  height: 29px;
+  justify-content: center;
+  transition: 0.2s all;
+  width: 85px;
+}
+.choose-zone-list-on-image__item a:hover {
+  background-color: #ffd21f;
+  color: #172129;
+}
+.choose-zone-list-on-image__item._kitchen {
+  left: 29%;
+  top: 75%;
+}
+.choose-zone-list-on-image__item._playroom {
+  left: 20%;
+  top: 68%;
+}
+.choose-zone-list-on-image__item._cabinet {
+  left: 12%;
+  top: 32%;
+}
+.choose-zone-list-on-image__item._living-room {
+  left: 43%;
+  top: 61%;
+}
+.choose-zone-list-on-image__item._bedroom {
+  left: 30%;
+  top: 10%;
+}
+.choose-zone-list-on-image__item._bathroom {
+  left: 66%;
+  top: 73%;
+}
+.choose-zone-list-on-image__item._hallway {
+  left: 74%;
+  top: 50%;
+}
+.choose-zone-list-on-image__item._wardrobe {
+  left: 71%;
+  top: 35%;
+}
+.choose-zone-list-on-image__item._workshop {
+  left: 68%;
+  top: 19%;
+}
+
 
 .header {
   box-shadow: -20px 0px 15px -5px rgba(0, 0, 0, 0.1);
@@ -527,12 +618,14 @@ body {
   width: calc(100% - 132px);
 }
 .block {
+  border-bottom: 1px solid #e7e8e9;
   padding: 52px 0 52px 15px;
 }
 .block-headline {
-  font-size: 1.5rempx;
+  font-size: 1.5rem;
   font-weight: 600;
-  margin-bottom: 52px;
+  margin: 0 auto 52px;
+  max-width: 620px;
   text-align: center;
   text-transform: uppercase;
 }

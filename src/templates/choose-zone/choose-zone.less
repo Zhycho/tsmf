@@ -1,0 +1,111 @@
+.choose-zone-wrapper {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.choose-zone-list {
+    left: 40px;
+    position: absolute;
+    top: 12px;
+}
+
+.choose-zone-list__item {
+
+    a {
+        display: inline-block;
+        font-size: 0.875rem;
+        font-weight: 600;
+        padding: 6px 0;
+        transition: .2s all;
+
+        &:hover {
+            color: #01449f;
+        }
+    }
+}
+
+.chooze-zone {
+    display: block;
+    margin: 0 auto;
+    position: relative;
+
+    img {
+        display: block;
+    }
+}
+
+.choose-zone-list-on-image {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.choose-zone-list-on-image__item {
+    position: absolute;
+    z-index: 1;
+
+    a {
+        align-items: center;
+        background-color: #01449f;
+        color: #FFF;
+        display: flex;
+        font-size: 0.75rem;
+        height: 29px;
+        justify-content: center;
+        transition: .2s all;
+        width: 85px;
+
+        &:hover {
+            background-color: #ffd21f;
+            color: #172129;
+        }
+    }
+
+    &._kitchen {
+        left: 29%;
+        top: 75%;
+    }
+
+    &._playroom {
+        left: 20%;
+        top: 68%;
+    }
+
+    &._cabinet {
+        left: 12%;
+        top: 32%;
+    }
+
+    &._living-room {
+        left: 43%;
+        top: 61%;
+    }
+
+    &._bedroom {
+        left: 30%;
+        top: 10%;
+    }
+
+    &._bathroom {
+        left: 66%;
+        top: 73%;
+    }
+
+    &._hallway {
+        left: 74%;
+        top: 50%;
+    }
+
+    &._wardrobe {
+        left: 71%;
+        top: 35%;
+    }
+
+    &._workshop {
+        left: 68%;
+        top: 19%;
+    }
+}
