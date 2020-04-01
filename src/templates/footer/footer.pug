@@ -1,4 +1,49 @@
 .container.footer 
     .footer-left
-        
-    .footer-right 
+        a(href="index.html").footer-logo
+            include ../_common/svg/logo-tsmf.svg
+        span.footer-copyright &copy; 2020 Центр мебельной фурнитуры
+        a(href="#").footer-praweb
+            include ../_common/svg/praweb.svg
+    .footer-right
+        .footer-right-top
+            div
+                a(href="#").footer-col-title О компании
+                ul.footer-link-list
+                    li.footer-link-list__item
+                        a(href="#") Команда
+                    li.footer-link-list__item
+                        a(href="#") Лицензии и сертификаты
+                    li.footer-link-list__item
+                        a(href="#") Вакансии
+                    li.footer-link-list__item
+                        a(href="#") Политика конфиденциальности
+            div
+                a(href="#").footer-col-title Личный кабинет
+                ul.footer-link-list
+                    li.footer-link-list__item
+                        a(href="#") Вход
+                    li.footer-link-list__item
+                        a(href="#") Личный кабинет
+                    li.footer-link-list__item
+                        a(href="#") История заказов
+                    li.footer-link-list__item
+                        a(href="#") Как получить оптовые цены
+
+            div
+                a(href="#").footer-col-title Контакты
+                address.footer-address
+                    a(href="mailto:mebfurnitura@yandex.ru") mebfurnitura@yandex.ru
+                    span Пермь, ул. Васильева 3В
+                    a(href="tel:+73422275444") +7 (342) 227-54-44
+                    ul.socials-list
+                        li.socials-list__item
+                            a(href="#")
+                                include ../_common/svg/instagram.svg
+                        li.socials-list__item
+                            a(href="#")
+                                include ../_common/svg/vk.svg
+        .footer-right-bottom
+            a(href="#").footer-bottom__link Конфиденциальность
+            a(href="#").footer-bottom__link Пользовательское соглашение
+
