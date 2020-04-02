@@ -195,7 +195,7 @@
         display: flex;
         fill: #FFF;
         font-size: 0.75rem;
-        padding: 4px 22px 4px 8px;
+        padding: 4px 8px;
         position: relative;
         transition: .2s all;
 
@@ -203,26 +203,35 @@
             margin-right: 6px;
         }
 
-        &::after {
-            border-left: 5px #FFF solid;
-            border-top: 4px transparent solid;
-            border-bottom: 4px transparent solid;
-            display: block;
-            content: "";
-            position: absolute;
-            right: 10px;
-            top: 50%;
-            transform: translateY(-50%);
-            transition: .2s all;
-        }
-
         &:hover {
-            color: #ffd21f;
-            fill: #ffd21f;
+            background-color: #838383;
+        }
+    }
+
+    &:first-of-type {
+        
+        a {
+            padding: 4px 22px 4px 8px;
 
             &::after {
-                border-left: 5px #ffd21f solid;
+                border-left: 5px #FFF solid;
+                border-top: 4px transparent solid;
+                border-bottom: 4px transparent solid;
+                display: block;
+                content: "";
+                position: absolute;
+                right: 10px;
+                top: 50%;
+                transform: translateY(-50%);
+                transition: .2s all;
             }
+        }
+    }
+
+    &.active {
+
+        a {
+            background-color: #838383;
         }
     }
 }
