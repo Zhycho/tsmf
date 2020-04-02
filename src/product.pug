@@ -1,0 +1,79 @@
+doctype html
+html(lang="ru")
+    head
+        include ./templates/head/head.pug
+    body
+        header
+            include ./templates/header/header.pug
+        main
+            .container.container_main
+                include ./templates/aside-catalog/aside-catalog.pug
+                .content-wrapper
+                    include ./templates/product-block/product-block.pug
+                    .block
+                        h2.block-headline С этим товаром часто покупают
+                        ul.often-buy-list
+                            li.product-card
+                                .product-card__top
+                                    img.product-card__img(src="assets/img/product_01.png", alt="")
+                                    span.product-card__title Заглушка кабель-канала. Размер 80 х 80 мм
+                                .product-card__mid
+                                    span.product-card__existence В наличии
+                                    span.product-card__price 279 &#8381;
+                                .product-card__bottom
+                                    a(href="product.html").product-card__detail Подробнее
+                                    a(href="javascript:;").product-card__to-basket 
+                                        include templates/_common/svg/basket.svg 
+                                        | В корзину
+                            li.product-card
+                                .product-card__top
+                                    img.product-card__img(src="assets/img/product_01.png", alt="")
+                                    span.product-card__title Заглушка кабель-канала. Размер 80 х 80 мм
+                                .product-card__mid
+                                    span.product-card__existence В наличии
+                                    span.product-card__price 279 &#8381;
+                                .product-card__bottom
+                                    a(href="product.html").product-card__detail Подробнее
+                                    a(href="javascript:;").product-card__to-basket 
+                                        include templates/_common/svg/basket.svg 
+                                        | В корзину
+                            li.product-card
+                                .product-card__top
+                                    img.product-card__img(src="assets/img/product_01.png", alt="")
+                                    span.product-card__title Заглушка кабель-канала. Размер 80 х 80 мм
+                                .product-card__mid
+                                    span.product-card__existence В наличии
+                                    span.product-card__price 279 &#8381;
+                                .product-card__bottom
+                                    a(href="product.html").product-card__detail Подробнее
+                                    a(href="javascript:;").product-card__to-basket 
+                                        include templates/_common/svg/basket.svg 
+                                        | В корзину
+                            li.product-card
+                                .product-card__top
+                                    img.product-card__img(src="assets/img/product_01.png", alt="")
+                                    span.product-card__title Заглушка кабель-канала. Размер 80 х 80 мм
+                                .product-card__mid
+                                    span.product-card__existence В наличии
+                                    span.product-card__price 279 &#8381;
+                                .product-card__bottom
+                                    a(href="product.html").product-card__detail Подробнее
+                                    a(href="javascript:;").product-card__to-basket 
+                                        include templates/_common/svg/basket.svg 
+                                        | В корзину
+                            li.product-card
+                                .product-card__top
+                                    img.product-card__img(src="assets/img/product_01.png", alt="")
+                                    span.product-card__title Заглушка кабель-канала. Размер 80 х 80 мм
+                                .product-card__mid
+                                    span.product-card__existence В наличии
+                                    span.product-card__price 279 &#8381;
+                                .product-card__bottom
+                                    a(href="product.html").product-card__detail Подробнее
+                                    a(href="javascript:;").product-card__to-basket 
+                                        include templates/_common/svg/basket.svg 
+                                        | В корзину
+                    include ./templates/global-search/global-search.pug
+                
+        footer
+            include ./templates/footer/footer.pug
