@@ -31,6 +31,40 @@
   fill: #191919;
 }
 
+.global-search {
+  background-color: #303030;
+  padding: 40px 40px 52px;
+}
+.global-search .search {
+  width: 100%;
+}
+.global-search .search input {
+  color: #ffd21f;
+}
+.global-search .search button {
+  fill: #ffd21f;
+}
+.global-search .search button:hover {
+  fill: #FFF;
+}
+.global-search__subtitle {
+  color: #ffd21f;
+  display: block;
+  font-size: 0.875rem;
+  margin: 0 auto 12px;
+  text-align: center;
+}
+.global-search__title {
+  color: #FFF;
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 auto 20px;
+  max-width: 600px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
 .choose-zone-wrapper {
   display: flex;
   justify-content: center;
@@ -849,7 +883,7 @@ body {
   text-align: center;
 }
 .product-card {
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.15);
   position: relative;
   overflow: hidden;
 }
@@ -1092,4 +1126,73 @@ body {
 }
 .input-checkbox input:checked + span::after {
   background-color: #FFF;
+}
+.category {
+  display: flex;
+}
+.category-filter {
+  padding-right: 12px;
+  width: 20%;
+}
+.category-slider-wrapper {
+  margin-top: -6px;
+  position: relative;
+  width: 80%;
+}
+.category-slider-wrapper .slick-dots {
+  bottom: -25px;
+  display: flex;
+  position: absolute;
+  right: 0;
+}
+.category-slider-wrapper .slick-dots li {
+  margin: 0 3px;
+}
+.category-slider-wrapper .slick-dots li button {
+  background-color: #FFF;
+  border: 1px solid #e2e2e2;
+  color: #8c8c8c;
+  height: 22px;
+  transition: 0.2s all;
+  width: 22px;
+}
+.category-slider-wrapper .slick-dots li button:hover {
+  background-color: #01449f;
+  border: 1px solid #01449f;
+  color: #FFF;
+}
+.category-slider-wrapper .slick-dots li.slick-active button {
+  background-color: #01449f;
+  border: 1px solid #01449f;
+  color: #FFF;
+}
+.category-slider-card-wrapper {
+  padding: 8px 4px 0;
+}
+.category-slider-card-wrapper .product-card {
+  font-size: 0.875rem;
+}
+.category-slider-card-wrapper .product-card__price {
+  font-size: 1.25rem;
+}
+.block.similiar-categories-block {
+  position: relative;
+}
+.show-all-btn {
+  align-items: center;
+  background-color: #01449f;
+  bottom: 10px;
+  color: #FFF;
+  display: flex;
+  font-size: 0.75rem;
+  height: 29px;
+  justify-content: center;
+  left: 15px;
+  padding: 0 8px;
+  position: absolute;
+  transition: 0.2s all;
+}
+.show-all-btn:hover {
+  background-color: #ffd21f;
+  color: #191919;
 }
