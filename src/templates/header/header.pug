@@ -38,7 +38,7 @@
                     li.header-nav__item
                         a(href="contacts.html") Контакты
                 .header-nav__buttons
-                    a(href="javascript:;").header-nav__buttons-item
+                    a(href="javascript:;").header-nav__buttons-item.js--header-nav__buttons-item-search
                         include ../_common/svg/search.svg
                     a(href="cabinet.html").header-nav__buttons-item
                         include ../_common/svg/profile.svg
@@ -59,12 +59,17 @@
                 li.breadcrumbs__item
                     a(href="index.html")
                         span Ручка
-            form.search
+            form.search#header-search
                 input(type="text", name="" maxlength="50" placeholder="Дверная ручка")
                 a(href="javascript:;")
                     include ../_common/svg/cross.svg
                 button(type="submit")
                     include ../_common/svg/search.svg
+        .header-burger-wrapper
+            a(href="javascript:;").header-burger
+                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="27" viewBox="0 0 35 27">
+                    <path d="M2.5,0h30a2.5,2.5,0,0,1,0,5H2.5A2.5,2.5,0,0,1,2.5,0Zm0,11h30a2.5,2.5,0,0,1,0,5H2.5A2.5,2.5,0,0,1,2.5,11Zm0,11h30a2.5,2.5,0,0,1,0,5H2.5A2.5,2.5,0,0,1,2.5,22Z"/>
+                </svg>
 
         
 

@@ -1,2 +1,115 @@
 .block
     h1.block-headline Ручка-кнопка 1084
+    .product-block
+        .product-slider
+            .product-slider__projector.js--product-slider__projector
+                .product-slider__projector-item
+                    img(src="assets/img/product_02.png", alt="")
+                .product-slider__projector-item
+                    img(src="assets/img/product_02.png", alt="")
+                .product-slider__projector-item
+                    img(src="assets/img/product_02.png", alt="")
+                .product-slider__projector-item
+                    img(src="assets/img/product_02.png", alt="")
+            .product-slider__nav-wrapper
+                .product-slider__nav.js--product-slider__nav
+                    .product-slider__nav-item
+                        img(src="assets/img/product_02.png", alt="")
+                    .product-slider__nav-item
+                        img(src="assets/img/product_02.png", alt="")
+                    .product-slider__nav-item
+                        img(src="assets/img/product_02.png", alt="")
+                    .product-slider__nav-item
+                        img(src="assets/img/product_02.png", alt="")
+                .product-slider__nav-prev.js--product-slider__nav-prev
+                .product-slider__nav-next.js--product-slider__nav-next
+        .product-main
+            ul.product-main-tab
+                li.product-main-tab__item.active
+                    a(href="javascript:;" data-index="0") Характеристики
+                li.product-main-tab__item
+                    a(href="javascript:;" data-index="1") Описание
+                li.product-main-tab__item
+                    a(href="javascript:;" data-index="2") Документация
+            ul.product-main-panel.product-main-characteristic.active(data-index="0")
+                li.product-main-characteristic__item
+                    a(href="javascript:;").product-main-characteristic__detail.active.js--product-main-characteristic__detail Общие характеристики
+                    ul.product-main-characteristic-list
+                        li.product-main-characteristic-list__item
+                            span Ширина/длина/высота (мм):
+                            span 0.65
+                        li.product-main-characteristic-list__item
+                            span Цвет:
+                            span Золотой, Серебряный, Стальной
+                        li.product-main-characteristic-list__item
+                            span Крепеж:
+                            span Ручка
+                        li.product-main-characteristic-list__item
+                            span Комплектация:
+                            span Винтовой
+                li.product-main-characteristic__item
+                    a(href="javascript:;").product-main-characteristic__detail.js--product-main-characteristic__detail Производитель
+                    ul.product-main-characteristic-list
+                        li.product-main-characteristic-list__item
+                            span Ширина/длина/высота (мм):
+                            span 0.65
+                        li.product-main-characteristic-list__item
+                            span Цвет:
+                            span Золотой, Серебряный, Стальной
+            .product-main-panel.product-main-description(data-index="1")
+                p Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн.
+                p Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн.
+            ul.product-main-panel.product-main-documentation(data-index="2")
+                li.product-main-documentation-item
+                    include ../_common/svg/download.svg
+                    a(href="download") Гарантия 
+                    span (27 kb)
+                li.product-main-documentation-item
+                    include ../_common/svg/download.svg
+                    a(href="download") Гарантия 
+                    span (27 kb)
+                li.product-main-documentation-item
+                    include ../_common/svg/download.svg
+                    a(href="download") Гарантия 
+                    span (27 kb)
+        .product-total
+            h1.product-total__headline Ручка-кнопка 1084
+            span.product-total__price 279 &#8381;
+            a(href="javascript:;").product-card__to-basket 
+                include ../_common/svg/basket.svg 
+                | В корзину
+            .product-counter-wrapper
+                span Кол-во:
+                .product-counter
+                    a(href="javascript:;").product-counter__less -
+                    input(type="text" readonly value="1")
+                    a(href="javascript:;").product-counter__more +
+            span.product-total__tooltip
+                | Оптовые цены
+                a(href="javascript:;") ?
+            span.product-card__existence В наличии
+    ul.product-features
+        li.product-features__item
+            .product-features__item-icon
+                include ../_common/svg/features-1.svg 
+            .product-features__item-text
+                span Быстро и без задержек доставляем
+                span Доставляем по Пермскому краю, Свердловской области, Тюменской области
+        li.product-features__item
+            .product-features__item-icon
+                include ../_common/svg/features-2.svg 
+            .product-features__item-text
+                span Возврат товара в течении 30 дней
+                span У Вас есть 30 календарных дней, чтобы протестировать приобретенный у нас товар
+        li.product-features__item
+            .product-features__item-icon
+                include ../_common/svg/features-3.svg 
+            .product-features__item-text
+                span Гарантия качества
+                span Предлагаем товары, в качестве которых мы уверены на 100 процентов
+        li.product-features__item
+            .product-features__item-icon
+                include ../_common/svg/features-4.svg 
+            .product-features__item-text
+                span Самые выгодные цены в Перми
+                span Перейдите в наш каталог и убедитесь в этом лично!

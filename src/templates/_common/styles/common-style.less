@@ -97,6 +97,10 @@ input:focus {
     &.container_main {
         display: flex;
     }
+
+    @media(max-width: 992px) {
+        padding: 0 15px;
+    }
 }
 
 *::selection {
@@ -203,6 +207,14 @@ input:focus {
 body {
     background: linear-gradient(to right, #013781 50%, #f7f7f7 50%);
     position: relative;
+
+    @media(max-width: 1200px) {
+        background: #FFF;
+
+        main {
+            min-height: 300px;
+        }
+    }
 }
 
 .content-wrapper {
@@ -461,8 +473,12 @@ body {
 .attention-slider {
     position: relative;
 
+    .slick-slide > div {
+        display: flex;
+    }
+
     .slick-dots {
-        bottom: -25px;
+        bottom: -35px;
         display: flex;
         position: absolute;
         right: 0;
@@ -499,8 +515,76 @@ body {
 
 .attention-slider-card-wrapper {
     padding: 8px 4px 0;
+
+    .product-card {
+        box-shadow: none;
+
+        &::before {
+            border: 3px solid #01449f;
+            content: "";
+            display: block;
+            height: calc(100% - 6px);
+            left: 0;
+            position: absolute;
+            user-select: none;
+            top: 0;
+            width: calc(100% - 6px);
+            z-index: -1;
+        }
+    }
 }
 
+.product-card-stock {
+    height: 90px;
+}
+
+.product-card-stock__lines {
+    display: flex;
+    justify-content: space-between;
+    padding: 4px 0;
+
+    span {
+        color: #000;
+        font-size: 0.75rem;
+
+        &:first-of-type {
+            width: 75%;
+        }
+
+        &:nth-of-type(2) {
+            width: 25%;
+        }
+    }
+}
+
+.product-card-stock__timer {
+    display: grid;
+    gap: 2px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.product-card-stock__timer-item {
+    align-items: center;
+    background-color: #e8e8e8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 8px 4px 12px;
+
+    span:first-of-type {
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+
+    span:nth-of-type(2) {
+        font-size: 0.75rem;
+    }
+
+    &.product-card-stock__timer-item_blue {
+        background-color: #01449f;
+        color: #FFF;
+    }
+}
 
 // инпуты
 
