@@ -17,6 +17,11 @@
             }
         }
     }
+
+    @media(max-width: 992px) {
+        margin-left: -15px;
+        width: calc(100% + 30px);
+    } 
 }
 
 .global-search__subtitle {
@@ -25,6 +30,10 @@
     font-size: 0.875rem;
     margin: 0 auto 12px;
     text-align: center;
+
+    @media(max-width: 768px) {
+        display: none;
+    }
 }
 
 .global-search__title {
@@ -36,4 +45,8 @@
     max-width: 600px;
     text-align: center;
     text-transform: uppercase;
+    
+    @media(max-width: 768px) {
+        font-size: 1rem;
+    }
 }

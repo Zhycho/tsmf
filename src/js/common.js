@@ -32,6 +32,24 @@ $(document).ready(function () {
             }
         ]
     });
+    // Мобильный
+    $('.js--attention-slider_mobile').slick({
+        arrows: false,
+        infinite: false,
+        dots: true,
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        swipe: false,
+        vertical: false,
+        responsive: [
+            {
+                breakpoint: 481,
+                settings: {
+                    slidesToShow: 1,
+                }
+            }
+        ]
+    });
 
     // слайдер в категории
     $('.js--category-slider').slick({
@@ -44,9 +62,16 @@ $(document).ready(function () {
         vertical: false,
         responsive: [
             {
-                breakpoint: 1200,
+                breakpoint: 1201,
                 settings: {
-                    slidesPerRow: 3
+                    slidesPerRow: 3,
+                    rows: 2,
+                }
+            },
+            {
+                breakpoint: 993,
+                settings: {
+                    slidesPerRow: 2
                 }
             },
             {
@@ -54,7 +79,13 @@ $(document).ready(function () {
                 settings: {
                     slidesPerRow: 2
                 }
-            }
+            },
+            {
+                breakpoint: 481,
+                settings: {
+                    slidesPerRow: 1
+                }
+            },
         ]
     });
 
@@ -69,7 +100,7 @@ $(document).ready(function () {
         asNavFor: '.js--product-slider__nav',
         responsive: [
             {
-                breakpoint: 661,
+                breakpoint: 577,
                 settings: {
                     swipe: true
                 }
@@ -87,16 +118,14 @@ $(document).ready(function () {
         focusOnSelect: true,
         responsive: [
             {
-                breakpoint: 1201,
+                breakpoint: 993,
                 settings: {
                     slidesToShow: 2,
                 }
             },
             {
                 breakpoint: 577,
-                settings: {
-                    slidesToShow: 4,
-                }
+                settings: "unslick"
             }
         ]
     });

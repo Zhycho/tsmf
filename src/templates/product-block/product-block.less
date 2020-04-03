@@ -1,8 +1,101 @@
 .product-block {
     align-items: start;
     display: grid;
+    grid-template-areas: "product-slider product-main product-total";
     grid-template-columns: 35% 45% 20%;
     margin-bottom: 24px;
+
+    @media(max-width: 992px) {
+        grid-template-columns: 25% 50% 25%;
+    } 
+
+    @media(max-width: 768px) {
+        grid-template-areas: 
+        "product-slider product-total"
+        "product-main product-main";
+        grid-template-columns: 50% 50%;
+    }
+
+    @media(max-width: 576px) {
+        grid-template-areas: 
+        "product-slider"
+        "product-total"
+        "product-main";
+        grid-template-columns: 100%;
+    }
+}
+
+.product-slider {
+    grid-area: product-slider;
+}
+
+.product-slider__projector-wrapper {
+    position: relative;
+
+    @media(max-width: 576px) {
+        margin: 0 auto 24px;
+        max-width: 300px;
+    }
+}
+
+.product-slider__projector-prev {
+    cursor: pointer;
+    height: 24px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px;
+
+    &::after {
+        border-bottom: 7px solid transparent;
+        border-right: 11px solid #ababab;
+        border-top: 7px solid transparent;
+        content: "";
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        transition: .2s all;
+        z-index: 1;
+    }
+
+    &:hover {
+
+        &::after {
+            border-right: 11px solid #303030;
+        }
+    }
+}
+
+.product-slider__projector-next {
+    cursor: pointer;
+    height: 24px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px;
+
+    &::after {
+        border-bottom: 7px solid transparent;
+        border-left: 11px solid #ababab;
+        border-top: 7px solid transparent;
+        content: "";
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        transition: .2s all;
+        z-index: 1;
+    }
+
+    &:hover {
+
+        &::after {
+            border-left: 11px solid #303030;
+        }
+    }
 }
 
 .product-slider__projector-item {
@@ -15,6 +108,10 @@
 
 .product-slider__nav-wrapper {
     position: relative;
+
+    @media(max-width: 576px) {
+        display: none;
+    }
 }
 
 .product-slider__nav-item {
@@ -95,7 +192,12 @@
 }
 
 .product-main {
+    grid-area: product-main;
     padding: 0 12px;
+
+    @media(max-width: 576px) {
+        padding: 0;
+    }
 }
 
 .product-main-tab {
@@ -128,6 +230,13 @@
         a {
             background-color: #01449f;
             color: #FFF;
+        }
+    }
+
+    @media(max-width: 420px) {
+
+        a {
+            font-size: 0.75rem;
         }
     }
 }
@@ -250,6 +359,7 @@
 
 .product-total {
     background-color: #f7f7f7;
+    grid-area: product-total;
     padding: 20px 16px;
 
     .product-card__to-basket {
@@ -264,6 +374,10 @@
             border-bottom: 3px solid #303030;
             border-right: 3px solid #303030;
         }
+    }
+
+    @media(max-width: 576px) {
+        margin-bottom: 24px;
     }
 }
 
@@ -370,6 +484,11 @@
     display: grid;
     gap: 10px;
     grid-template-columns: 1fr 1fr;
+
+    @media(max-width: 768px) {
+        gap: 0;
+        grid-template-columns: 1fr;
+    }
 }
 
 .product-features__item {
@@ -377,6 +496,19 @@
     background-color: #f7f7f7;
     display: flex;
     padding: 16px 20px;
+
+    @media(max-width: 992px) {
+        padding: 16px 12px;
+    }
+
+    @media(max-width: 768px) {
+        margin-left: -15px;
+        width: calc(100% + 30px);
+    
+        &:nth-of-type(even) {
+            background-color: #FFF;
+        }
+    }
 }
 
 .product-features__item-icon {
@@ -388,6 +520,14 @@
     min-width: 50px;
     margin-right: 20px;
     width: 50px;
+
+    @media(max-width: 992px) {
+        margin-right: 8px;
+    }
+
+    @media(max-width: 768px) {
+        margin-right: 0;
+    }
 }
 
 .product-features__item-text {
@@ -398,6 +538,7 @@
         &:first-of-type {
             font-size: 1.125rem;
             font-weight: 600;
+            margin-bottom: 8px;
         }
 
         &:nth-of-type(2) {
