@@ -11,15 +11,23 @@ $(document).ready(function () {
         vertical: false,
         responsive: [
             {
-                breakpoint: 1200,
+                breakpoint: 1201,
                 settings: {
                     slidesPerRow: 3
                 }
             },
             {
-                breakpoint: 920,
+                breakpoint: 769,
                 settings: {
-                    slidesPerRow: 2
+                    slidesPerRow: 2,
+                    rows: 2,
+                }
+            },
+            {
+                breakpoint: 481,
+                settings: {
+                    slidesPerRow: 1,
+                    rows: 2,
                 }
             }
         ]
@@ -42,7 +50,7 @@ $(document).ready(function () {
                 }
             },
             {
-                breakpoint: 920,
+                breakpoint: 769,
                 settings: {
                     slidesPerRow: 2
                 }

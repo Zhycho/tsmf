@@ -219,11 +219,23 @@ body {
 
 .content-wrapper {
     width: calc(100% - 132px);
+
+    @media(max-width: 992px) {
+        width: 100%;
+    }
 }
 
 .block {
     border-bottom: 1px solid #e7e8e9;
     padding: 52px 0 52px 15px;
+
+    @media(max-width: 992px) {
+        padding: 52px 0;
+    }
+
+    @media(max-width: 768px) {
+        padding: 40px 0;
+    }
 }
 
 .block-headline {
@@ -233,6 +245,11 @@ body {
     max-width: 620px;
     text-align: center;
     text-transform: uppercase;
+
+    @media(max-width: 768px) {
+        font-size: 1.25rem;
+        margin: 0 auto 40px;
+    }
 }
 
 // Блок категорий
@@ -241,6 +258,22 @@ body {
     display: grid;
     gap: 12px;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
+    @media(max-width: 1200px) {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    @media(max-width: 992px) {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    @media(max-width: 768px) {
+        grid-template-columns: calc(50% - 4px) calc(50% - 4px);
+    }
+
+    @media(max-width: 480px) {
+        gap: 8px;
+    }
 }
 
 .category-cart {
@@ -295,6 +328,15 @@ body {
             border: 3px solid #01449f;
         }
     }
+
+    @media(max-width: 480px) {
+        height: 220px;
+        padding: 12px 0;
+
+        img {
+            width: 120px;
+        }
+    }
 }
 
 .category-cart__title {
@@ -303,6 +345,14 @@ body {
     margin-bottom: 16px;
     padding: 0 8px;
     text-align: center;
+
+    @media(max-width: 768px) {
+        font-size: 0.9rem;
+    }
+
+    @media(max-width: 480px) {
+        margin-bottom: 8px;
+    }
 }
 
 
@@ -439,6 +489,11 @@ body {
     left: 2px;
     position: absolute;
     top: -40px;
+
+    @media(max-width: 768px) {
+        justify-content: center;
+        position: static;
+    }
 }
 
 .attention-tab-list__item {
