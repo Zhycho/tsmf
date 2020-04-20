@@ -1,0 +1,115 @@
+.main-slider-block {
+
+}
+
+.block-headline.main-slider-block__block-headline {
+    margin: 24px auto;
+}
+
+.main-slider {
+    position: relative;
+
+    .slick-dots {
+        position: absolute;
+        right: 32px;
+        top: 50%;
+        transform: translateY(-50%);
+
+        li {
+            align-items: center;
+            display: flex;
+
+            button {
+                background-color: transparent;
+                border: none;
+                color: transparent;
+                font-size: 0;
+                height: 11px;
+                position: relative;
+                transition: .2s all;
+                width: 40px;
+
+                &::after {
+                    background-color: #FFF;
+                    content: "";
+                    display: block;
+                    height: calc(100% - 7px);
+                    position: absolute;
+                    right: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    transition: .2s all;
+                    width: 100%;
+                }
+
+                &:hover {
+
+                    &::after {
+                        background-color: #ffd21f;
+                        width: 50%;
+                    }
+                }
+            }
+
+            &.slick-active {
+                
+                button {
+
+                    &::after {
+                        background-color: #ffd21f;
+                        width: 50%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.main-slider__item {
+    position: relative;
+
+    img {
+        display: block;
+        width: 100%;
+    }
+}
+
+.main-slider__item-headline {
+    color: #FFF;
+    font-weight: 400;
+    font-size: 3rem;
+    left: 32px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.main-slider__item-link {
+    bottom: 40px;
+    color: #FFF;
+    cursor: pointer;
+    font-size: 0.875rem;
+    left: 32px;
+    position: absolute;
+    text-decoration: underline;
+    transition: .2s all;
+
+    &:hover {
+        color: #ffd21f;
+        text-decoration: none;
+    }
+}
+
+.main-slider__item-label {
+    background-color: #ffd21f;
+    color: #171616;
+    display: inline-block;
+    font-size: 1.125rem;
+    font-weight: 600;
+    height: 39px;
+    line-height: 39px;
+    padding: 0 24px;
+    position: absolute;
+    right: 32px;
+    top: 52px;
+}

@@ -1,5 +1,44 @@
 $(document).ready(function () { 
 
+    // Слайдер акций на главной
+    $('.js--main-slider').slick({
+        arrows: false,
+        infinite: false,
+        dots: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        swipe: false,
+        vertical: false,
+        responsive: [
+            {
+                breakpoint: 481,
+                settings: {
+                    slidesToShow: 1,
+                }
+            }
+        ]
+    });
+
+    // Слайдер услуг на главной
+    $('.js--services-slider').slick({
+        prevArrow: $('.js--services-slider__nav-prev'),
+        nextArrow: $('.js--services-slider__nav-next'),
+        infinite: true,
+        dots: false,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        swipe: false,
+        vertical: false,
+        responsive: [
+            {
+                breakpoint: 481,
+                settings: {
+                    slidesToShow: 1,
+                }
+            }
+        ]
+    });
+
     // Слайдер блока "обрати внимание"
     $('.js--attention-slider').slick({
         arrows: false,
