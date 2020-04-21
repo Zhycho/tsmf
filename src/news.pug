@@ -1,0 +1,70 @@
+doctype html
+html(lang="ru")
+    head
+        include ./templates/head/head.pug
+    body
+        header
+            include ./templates/header/header.pug
+        main
+            .container.container_main
+                include ./templates/aside-catalog/aside-catalog.pug
+                .content-wrapper
+                    .block
+                        h1.block-headline Новости и статьи
+                        ul.filter-list
+                            li.filter-list__item
+                                a(href="javascript:;").active Все публикации
+                            li.filter-list__item
+                                a(href="javascript:;") Новости
+                            li.filter-list__item
+                                a(href="javascript:;") Статьи
+                            li.filter-list__item
+                                a(href="javascript:;") События
+                            li.filter-list__item
+                                a(href="javascript:;") Поступление товара
+                        ul.news-list
+                            li.news-card
+                                img(src="assets/img/news_01.png", alt="")
+                                .news-card__description-wrapper
+                                    time(datatime="2020-02-23").news-card__time 23.02.2020
+                                    h2.news-card__headline Заглушка кабель-канала. <br> Размер 80 х 80 мм
+                                    p.news-card__description Эти бренды различны по концепции и формату, но успешно дополняют друг друга на базе единых ценностей и общей цели — помочь каждому создать дом своей мечты.
+                                    a(href="article.html").news-card__detail Подробнее
+                            li.news-card
+                                img(src="assets/img/news_02.png", alt="")
+                                .news-card__description-wrapper
+                                    time(datatime="2020-02-23").news-card__time 23.02.2020
+                                    h2.news-card__headline Заглушка кабель-канала. <br> Размер 80 х 80 мм
+                                    p.news-card__description Эти бренды различны по концепции и формату, но успешно дополняют друг друга на базе единых ценностей и общей цели — помочь каждому создать дом своей мечты.
+                                    a(href="article.html").news-card__detail Подробнее
+                            li.news-card
+                                img(src="assets/img/news_01.png", alt="")
+                                .news-card__description-wrapper
+                                    time(datatime="2020-02-23").news-card__time 23.02.2020
+                                    h2.news-card__headline Заглушка кабель-канала. <br> Размер 80 х 80 мм
+                                    p.news-card__description Эти бренды различны по концепции и формату, но успешно дополняют друг друга на базе единых ценностей и общей цели — помочь каждому создать дом своей мечты.
+                                    a(href="article.html").news-card__detail Подробнее
+                            li.news-card
+                                img(src="assets/img/news_02.png", alt="")
+                                .news-card__description-wrapper
+                                    time(datatime="2020-02-23").news-card__time 23.02.2020
+                                    h2.news-card__headline Заглушка кабель-канала. <br> Размер 80 х 80 мм
+                                    p.news-card__description Эти бренды различны по концепции и формату, но успешно дополняют друг друга на базе единых ценностей и общей цели — помочь каждому создать дом своей мечты.
+                                    a(href="article.html").news-card__detail Подробнее
+                            li.news-card
+                                img(src="assets/img/news_01.png", alt="")
+                                .news-card__description-wrapper
+                                    time(datatime="2020-02-23").news-card__time 23.02.2020
+                                    h2.news-card__headline Заглушка кабель-канала. <br> Размер 80 х 80 мм
+                                    p.news-card__description Эти бренды различны по концепции и формату, но успешно дополняют друг друга на базе единых ценностей и общей цели — помочь каждому создать дом своей мечты.
+                                    a(href="article.html").news-card__detail Подробнее
+                            li.news-card
+                                img(src="assets/img/news_02.png", alt="")
+                                .news-card__description-wrapper
+                                    time(datatime="2020-02-23").news-card__time 23.02.2020
+                                    h2.news-card__headline Заглушка кабель-канала. <br> Размер 80 х 80 мм
+                                    p.news-card__description Эти бренды различны по концепции и формату, но успешно дополняют друг друга на базе единых ценностей и общей цели — помочь каждому создать дом своей мечты.
+                                    a(href="article.html").news-card__detail Подробнее
+
+        footer
+            include ./templates/footer/footer.pug
