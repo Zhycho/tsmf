@@ -11,9 +11,20 @@ $(document).ready(function () {
         vertical: false,
         responsive: [
             {
-                breakpoint: 481,
+                breakpoint: 993,
                 settings: {
-                    slidesToShow: 1,
+                    dots: false,
+                    arrows: true,
+                    infinite: true,
+                }
+            },
+            {
+                breakpoint: 577,
+                settings: {
+                    dots: false,
+                    arrows: true,
+                    infinite: true,
+                    swipe: true,
                 }
             }
         ]
@@ -31,9 +42,9 @@ $(document).ready(function () {
         vertical: false,
         responsive: [
             {
-                breakpoint: 481,
+                breakpoint: 1201,
                 settings: {
-                    slidesToShow: 1,
+                    slidesToShow: 3,
                 }
             }
         ]
@@ -168,6 +179,17 @@ $(document).ready(function () {
             }
         ]
     });
+
+    // Смена текста заголовка у блока choose-zone
+
+    let chooseZoneHeadline = document.querySelector('.js--block-headline_choose-zone');
+
+    if (document.documentElement.clientWidth < 769 ) {
+        chooseZoneHeadline.innerHTML = "Фурнитура по помещениям";
+    } else {
+        chooseZoneHeadline.innerHTML = "Выберете зону на карте и мы предоставим решение Вашей ситуации";
+    }
+
 
     // Табулятор в странице товаров
     const tabLinks = document.querySelectorAll(".product-main-tab__item a");

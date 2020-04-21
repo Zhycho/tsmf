@@ -252,6 +252,21 @@ body {
     }
 }
 
+.block-text {
+    padding: 0 40px;
+
+    p {
+        color: #2e2e2e;
+        font-family: "FuturaPTBook";
+        font-size: 1rem;
+        margin-bottom: 24px;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+}
+
 // Блок категорий
 
 .categories-list-catalog {
@@ -842,15 +857,26 @@ body {
         }
 
         .show-all-btn {
+            font-size: 0.875rem;
+            height: 44px;
             position: static;
             margin: 24px auto 0;
-            width: fit-content;
+            max-width: 320px;
+            width: 100%;
         }
     }
 
     @media(max-width: 768px) {    
         .category-cart:nth-of-type(n + 3) {
             display: none;
+        }
+    }
+
+    &.similiar-categories-block_index-page {
+        display: none;
+
+        @media(max-width: 768px) {
+            display: block;
         }
     }
 }
