@@ -36,6 +36,151 @@
   fill: #191919;
 }
 
+.choose-zone-wrapper {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.choose-zone-list {
+  left: 40px;
+  position: absolute;
+  top: 12px;
+  z-index: 1;
+}
+@media (max-width: 768px) {
+  .choose-zone-list {
+    display: none;
+  }
+}
+.choose-zone-list__item a {
+  display: inline-block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 6px 0;
+  transition: 0.2s all;
+}
+.choose-zone-list__item a:hover {
+  color: #01449f;
+}
+.choose-zone-list__item:first-of-type {
+  position: relative;
+}
+.choose-zone-list__item:first-of-type svg {
+  fill: #01449f;
+  left: -24px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.chooze-zone {
+  display: block;
+  margin: 0 auto;
+  position: relative;
+}
+.chooze-zone img {
+  display: block;
+}
+@media (max-width: 1200px) {
+  .chooze-zone img {
+    width: 700px;
+  }
+}
+@media (max-width: 992px) {
+  .chooze-zone img {
+    width: 600px;
+  }
+}
+@media (max-width: 768px) {
+  .chooze-zone {
+    width: 100%;
+  }
+  .chooze-zone img {
+    display: none;
+  }
+}
+.choose-zone-list-on-image {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .choose-zone-list-on-image {
+    position: static;
+    width: 100%;
+    display: grid;
+    gap: 8px;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+.choose-zone-list-on-image__item {
+  position: absolute;
+  z-index: 1;
+}
+.choose-zone-list-on-image__item a {
+  align-items: center;
+  background-color: #01449f;
+  color: #FFF;
+  display: flex;
+  font-size: 0.75rem;
+  height: 29px;
+  justify-content: center;
+  transition: 0.2s all;
+  width: 85px;
+}
+.choose-zone-list-on-image__item a:hover {
+  background-color: #ffd21f;
+  color: #172129;
+}
+@media (max-width: 768px) {
+  .choose-zone-list-on-image__item {
+    position: static;
+    width: 100%;
+  }
+  .choose-zone-list-on-image__item a {
+    height: 35px;
+    font-size: 0.875rem;
+    width: 100%;
+  }
+}
+.choose-zone-list-on-image__item._kitchen {
+  left: 29%;
+  top: 75%;
+}
+.choose-zone-list-on-image__item._playroom {
+  left: 20%;
+  top: 68%;
+}
+.choose-zone-list-on-image__item._cabinet {
+  left: 12%;
+  top: 32%;
+}
+.choose-zone-list-on-image__item._living-room {
+  left: 43%;
+  top: 61%;
+}
+.choose-zone-list-on-image__item._bedroom {
+  left: 30%;
+  top: 10%;
+}
+.choose-zone-list-on-image__item._bathroom {
+  left: 66%;
+  top: 73%;
+}
+.choose-zone-list-on-image__item._hallway {
+  left: 74%;
+  top: 50%;
+}
+.choose-zone-list-on-image__item._wardrobe {
+  left: 71%;
+  top: 35%;
+}
+.choose-zone-list-on-image__item._workshop {
+  left: 68%;
+  top: 19%;
+}
+
 .global-search {
   background-color: #303030;
   padding: 40px 40px 52px;
@@ -310,151 +455,6 @@
 }
 .footer-bottom__link:hover {
   color: #ffd21f;
-}
-
-.choose-zone-wrapper {
-  display: flex;
-  justify-content: center;
-  position: relative;
-}
-.choose-zone-list {
-  left: 40px;
-  position: absolute;
-  top: 12px;
-  z-index: 1;
-}
-@media (max-width: 768px) {
-  .choose-zone-list {
-    display: none;
-  }
-}
-.choose-zone-list__item a {
-  display: inline-block;
-  font-size: 0.875rem;
-  font-weight: 600;
-  padding: 6px 0;
-  transition: 0.2s all;
-}
-.choose-zone-list__item a:hover {
-  color: #01449f;
-}
-.choose-zone-list__item:first-of-type {
-  position: relative;
-}
-.choose-zone-list__item:first-of-type svg {
-  fill: #01449f;
-  left: -24px;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-}
-.chooze-zone {
-  display: block;
-  margin: 0 auto;
-  position: relative;
-}
-.chooze-zone img {
-  display: block;
-}
-@media (max-width: 1200px) {
-  .chooze-zone img {
-    width: 700px;
-  }
-}
-@media (max-width: 992px) {
-  .chooze-zone img {
-    width: 600px;
-  }
-}
-@media (max-width: 768px) {
-  .chooze-zone {
-    width: 100%;
-  }
-  .chooze-zone img {
-    display: none;
-  }
-}
-.choose-zone-list-on-image {
-  height: 100%;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 100%;
-}
-@media (max-width: 768px) {
-  .choose-zone-list-on-image {
-    position: static;
-    width: 100%;
-    display: grid;
-    gap: 8px;
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-}
-.choose-zone-list-on-image__item {
-  position: absolute;
-  z-index: 1;
-}
-.choose-zone-list-on-image__item a {
-  align-items: center;
-  background-color: #01449f;
-  color: #FFF;
-  display: flex;
-  font-size: 0.75rem;
-  height: 29px;
-  justify-content: center;
-  transition: 0.2s all;
-  width: 85px;
-}
-.choose-zone-list-on-image__item a:hover {
-  background-color: #ffd21f;
-  color: #172129;
-}
-@media (max-width: 768px) {
-  .choose-zone-list-on-image__item {
-    position: static;
-    width: 100%;
-  }
-  .choose-zone-list-on-image__item a {
-    height: 35px;
-    font-size: 0.875rem;
-    width: 100%;
-  }
-}
-.choose-zone-list-on-image__item._kitchen {
-  left: 29%;
-  top: 75%;
-}
-.choose-zone-list-on-image__item._playroom {
-  left: 20%;
-  top: 68%;
-}
-.choose-zone-list-on-image__item._cabinet {
-  left: 12%;
-  top: 32%;
-}
-.choose-zone-list-on-image__item._living-room {
-  left: 43%;
-  top: 61%;
-}
-.choose-zone-list-on-image__item._bedroom {
-  left: 30%;
-  top: 10%;
-}
-.choose-zone-list-on-image__item._bathroom {
-  left: 66%;
-  top: 73%;
-}
-.choose-zone-list-on-image__item._hallway {
-  left: 74%;
-  top: 50%;
-}
-.choose-zone-list-on-image__item._wardrobe {
-  left: 71%;
-  top: 35%;
-}
-.choose-zone-list-on-image__item._workshop {
-  left: 68%;
-  top: 19%;
 }
 
 
@@ -2713,4 +2713,66 @@ body {
   .often-buy-list {
     grid-template-columns: 1fr;
   }
+}
+.services {
+  display: grid;
+  gap: 8px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.services__item {
+  align-items: center;
+  background-color: #f7f7f7;
+  height: 172px;
+  display: flex;
+  flex-direction: column;
+  padding: 0 36px;
+  position: relative;
+  transition: 0.2s all;
+}
+.services__item div {
+  fill: #01449f;
+  margin-top: 48px;
+  height: 60px;
+  position: relative;
+  transition: 0.2s all;
+}
+.services__item div::after {
+  background-color: #01449f;
+  content: "";
+  display: block;
+  height: 3px;
+  left: 50%;
+  position: absolute;
+  top: 100%;
+  transform: translateX(-50%);
+  width: 32px;
+}
+.services__item span {
+  align-items: center;
+  color: #303030;
+  font-size: 1.125rem;
+  font-weight: 600;
+  height: 60px;
+  display: flex;
+  text-align: center;
+  transition: 0.2s all;
+}
+.services__item a {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.services__item:hover {
+  background-color: #01449f;
+}
+.services__item:hover div {
+  fill: #FFF;
+}
+.services__item:hover div::after {
+  background-color: #FFF;
+}
+.services__item:hover span {
+  color: #FFF;
 }
