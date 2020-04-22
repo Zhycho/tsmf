@@ -579,6 +579,27 @@ body {
     }
 }
 
+.product-card.product-card_mini {
+    padding-bottom: 38px;
+
+    .product-card__top {
+        border-bottom: none;
+    }
+
+    .product-card__title {
+        margin-bottom: 20px;
+        margin-top: 8px;
+    }
+
+    .product-card__bottom {
+        bottom: 0;
+        display: block;
+        left: 0;
+        position: absolute;
+        width: 100%;
+    }
+}
+
 // Блок обратите внимание
 
 .attention-wrapper {
@@ -1283,3 +1304,101 @@ body {
     }
 }
 
+.open-up-text {
+    background-color: #f7f7f7;
+    margin-bottom: 12px;
+    padding: 24px 20px;
+
+    @media(max-width: 576px) {
+        padding: 16px 20px;
+    }
+}
+
+.open-up-text__detail {
+    display: inline-block;
+    font-weight: 600;
+    margin-bottom: 0;
+    position: relative;
+    transition: 0.2s all;
+
+    &::after {
+        border-left: 4px solid transparent;
+        border-top: 6px solid #000;
+        border-right: 4px solid transparent;
+        content: "";
+        position: absolute;
+        right: -20px;
+        top: 50%;
+        transform: translate(0, -2px);
+        transition: 0.2s all;
+        z-index: 1;
+    }
+
+    &.active {
+        margin-bottom: 16px;
+
+        &::after {
+            transform: translate(0, -1px) rotate(180deg);
+        }
+
+        & + .open-up-text__wrapper {
+            display: block;
+        }
+    }
+
+    &:hover {
+        color: #01449f;
+
+        &::after {
+            border-top: 6px solid #01449f;
+        }
+    }
+}
+
+.open-up-text__wrapper {
+    display: none;
+
+    p {
+        font-size: 0.875rem;
+        line-height: 24px;
+        margin-bottom: 24px;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+}
+
+
+.you-watched-list {
+    display: grid;
+    gap: 13px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
+    .product-card {
+
+        .product-card__title {
+            font-size: 0.875rem;
+        }
+        
+        .product-card__price  {
+            font-size: 1.25rem;
+        }
+    }
+
+    @media(max-width: 1200px) {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    @media(max-width: 768px) {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    @media(max-width: 576px) {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @media(max-width: 420px) {
+        grid-template-columns: 1fr;
+    }
+}

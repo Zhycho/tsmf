@@ -32,9 +32,17 @@
 .product-slider__projector-wrapper {
     position: relative;
 
+    .product-slider__projector-prev, .product-slider__projector-next {
+        display: none;
+    }
+
     @media(max-width: 576px) {
         margin: 0 auto 24px;
         max-width: 300px;
+
+        .product-slider__projector-prev, .product-slider__projector-next {
+            display: block;
+        }
     }
 }
 

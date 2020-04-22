@@ -169,7 +169,9 @@ $(document).ready(function () {
             {
                 breakpoint: 577,
                 settings: {
-                    swipe: true
+                    swipe: true,
+                    prevArrow: $('.js--product-slider__projector-prev'),
+                    nextArrow: $('.js--product-slider__projector-next')
                 }
             }
         ]
@@ -197,16 +199,6 @@ $(document).ready(function () {
         ]
     });
 
-    // Смена текста заголовка у блока choose-zone
-
-    let chooseZoneHeadline = document.querySelector('.js--block-headline_choose-zone');
-
-    if (document.documentElement.clientWidth < 769 ) {
-        chooseZoneHeadline.innerHTML = "Фурнитура по помещениям";
-    } else {
-        chooseZoneHeadline.innerHTML = "Выберете зону на карте и мы предоставим решение Вашей ситуации";
-    }
-
 
     // Табулятор в странице товаров
     const tabLinks = document.querySelectorAll(".product-main-tab__item a");
@@ -229,12 +221,27 @@ $(document).ready(function () {
     }
 
     // Раскрывашки в характеристиках товара
-    $(document).on('click','.js--product-main-characteristic__detail',function(){
+    $(document).on('click','.js--product-main-characteristic__detail', function() {
         $(this).toggleClass('active');
     });
 
     // Поиск в хедере
-    $(document).on('click','.js--header-nav__buttons-item-search',function(){
+    $(document).on('click','.js--header-nav__buttons-item-search', function() {
         $('#header-search').toggleClass('active');
     });
+
+    // Раскрывашки текстовых блоков
+    $(document).on('click','.js--open-up-text__detail', function() {
+        $(this).toggleClass('active');
+    });
+
+    // Смена текста заголовка у блока choose-zone
+
+    // let chooseZoneHeadline = document.querySelector('.js--block-headline_choose-zone');
+
+    // if (document.documentElement.clientWidth < 769 ) {
+    //     chooseZoneHeadline.innerHTML = "Фурнитура по помещениям";
+    // } else {
+    //     chooseZoneHeadline.innerHTML = "Выберете зону на карте и мы предоставим решение Вашей ситуации";
+    // }
 });
