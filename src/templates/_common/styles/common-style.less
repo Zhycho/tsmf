@@ -204,6 +204,68 @@ input:focus {
 
 //
 
+.slider-pagination {
+
+    .slick-dots {
+        bottom: -35px;
+        display: flex;
+        position: absolute;
+        right: 0;
+
+        li {
+            margin: 0 3px;
+
+            button {
+                background-color: #FFF;
+                border: 1px solid #e2e2e2;
+                color: #8c8c8c;
+                height: 22px;
+                transition: 0.2s all;
+                width: 22px;
+
+                &:hover {
+                    background-color: #01449f;
+                    border: 1px solid #01449f;
+                    color: #FFF;
+                }
+            }
+
+            &.slick-active {
+
+                button {
+                    background-color: #01449f;
+                    border: 1px solid #01449f;
+                    color: #FFF;
+                }
+            }
+        }
+    }
+}
+
+.show-all-btn-mobile {
+    font-size: 0.875rem;
+    height: 44px;
+    margin: 24px auto 0;
+    max-width: 320px;
+    width: 100%;
+    align-items: center;
+    background-color: #01449f;
+    color: #FFF;
+    display: none;
+    justify-content: center;
+    padding: 0 8px;
+    transition: 0.2s all;
+
+    &:hover {
+        background-color: #ffd21f;
+        color: #191919;
+    }
+
+    @media(max-width: 768px) {
+        display: flex;
+    }
+}
+
 body {
     background: linear-gradient(to right, #013781 50%, #f7f7f7 50%);
     position: relative;
@@ -239,6 +301,21 @@ body {
 
     @media(max-width: 480px) {
         padding: 24px 0;
+    }
+
+    &.block_only-mobile {
+        display: none;
+
+        @media(max-width: 768px) {
+            display: block;
+        }
+    }
+
+    &.block_hide-mobile {
+
+        @media(max-width: 768px) {
+            display: none;
+        }
     }
 }
 
@@ -1178,3 +1255,31 @@ body {
         }
     }
 }
+
+.block.block_news-index {
+
+    .filter-list {
+        display: none;
+    }
+
+    @media (max-width: 768px) {
+        .filter-list {
+            display: flex;
+        }
+    }
+}
+
+.news-list.news-slider {
+    display: block;
+    margin: 0 -6px;
+
+    .news-card {
+        display: flex;
+        margin: 2px 6px;
+    }
+
+    @media (max-width: 768px) {
+        display: grid;
+    }
+}
+

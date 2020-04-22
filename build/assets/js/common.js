@@ -82,6 +82,23 @@ $(document).ready(function () {
             }
         ]
     });
+
+    // Слайдер блока "обрати внимание"
+    $('.js--news-slider').slick({
+        arrows: false,
+        infinite: false,
+        dots: true,
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        swipe: false,
+        vertical: false,
+        responsive: [
+            {
+                breakpoint: 769,
+                settings: "unslick"
+            }
+        ]
+    });
     // Мобильный
     $('.js--attention-slider_mobile').slick({
         arrows: false,
