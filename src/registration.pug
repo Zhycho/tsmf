@@ -1,0 +1,50 @@
+doctype html
+html(lang="ru")
+    head
+        include ./templates/head/head.pug
+    body
+        header
+            include ./templates/header/header.pug
+        main
+            .container.container_main
+                include ./templates/aside-catalog/aside-catalog.pug
+                .content-wrapper
+                    .block
+                        h1.block-headline Регистрация в личном кабинете
+                        .content-wrapper-with-side-block
+                            form.profile-form(action="")
+                                .profile-form__header
+                                    h2.profile-form__headline Заполните необходимые поля для регистрации юридического лица
+                                .profile-form__main
+                                    label.input-blue-bord
+                                        input(type="text", name="" placeholder="Название организации*" required)
+                                    label.input-blue-bord
+                                        input(type="tel", name="" placeholder="Телефон*" required)
+                                    label.input-blue-bord
+                                        input(type="text", name="" placeholder="ИНН*" required)
+                                    label.input-blue-bord
+                                        input(type="text", name="" placeholder="БИК*" required)
+                                    label.input-blue-bord
+                                        input(type="text", name="" placeholder="ФИО*" required)
+                                    label.input-blue-bord
+                                        input(type="text", name="" placeholder="Логин*" required)
+                                    label.input-blue-bord
+                                        input(type="text", name="" placeholder="Пароль*" required)
+                                    .profile-form__final
+                                        label.input-checkbox.profile-form__input-checkbox
+                                            input(type="checkbox", name="")
+                                            span Я принимаю 
+                                                a(href="#") Условия политики конфиденциальности
+                                        input(type="submit", value="Отправить данные").input-submit.profile-form__input-submit
+                            nav.right-side-nav
+                                ul
+                                    li.right-side-nav__item
+                                        a(href="cabinet.html") Личный кабинет
+                                    li.right-side-nav__item
+                                        a(href="history.html") История заказов
+                                    li.right-side-nav__item
+                                        a(href="profile.html") Мой профиль
+                                    li.right-side-nav__item.active
+                                        a(href="registration.html") Регистрация 
+        footer
+            include ./templates/footer/footer.pug
